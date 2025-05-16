@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vyond Legacy (2018 Style) - Demo</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f8fa;
+    color: #333;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0072ce;
+    color: white;
+    padding: 12px 24px;
+  }
+  header .logo {
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+  header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+  }
+  header nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Main Layout */
+  .container {
+    display: flex;
+    height: calc(100vh - 56px);
+  }
+
+  /* Sidebar */
+  aside.sidebar {
+    background: #004b8d;
+    width: 220px;
+    padding: 20px;
+    color: #cbd6e2;
+    display: flex;
+    flex-direction: column;
+  }
+  aside.sidebar h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  aside.sidebar button {
+    background: transparent;
+    border: none;
+    color: #cbd6e2;
+    padding: 10px 0;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  aside.sidebar button:hover {
+    color: #fff;
+  }
+
+  /* Workspace */
+  main.workspace {
+    flex: 1;
+    background: white;
+    margin: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Toolbar */
+  .toolbar {
+    background: #0072ce;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  .toolbar button {
+    background: #005bb5;
+    border: none;
+    color: white;
+    margin-right: 15px;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+  .toolbar button:hover {
+    background: #004080;
+  }
+
+  /* Canvas Area */
+  .canvas {
+    flex: 1;
+    background: #e5e9f2;
+    margin: 20px;
+    border: 2px dashed #0072ce;
+    border-radius: 6px;
+    position: relative;
+  }
+  .canvas .placeholder-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0072ce;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.9rem;
+    color: #999;
+    background: #f5f8fa;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">VYOND</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Templates</a>
+    <a href="#">My Videos</a>
+    <a href="#">Help</a>
+    <a href="#">Sign In</a>
+  </nav>
+</header>
+
+<div class="container">
+  <aside class="sidebar">
+    <h2>Tools</h2>
+    <button>Characters</button>
+    <button>Props</button>
+    <button>Text</button>
+    <button>Backgrounds</button>
+    <button>Audio</button>
+    <button>Scenes</button>
+  </aside>
+
+  <main class="workspace">
+    <div class="toolbar">
+      <button>Play</button>
+      <button>Pause</button>
+      <button>Undo</button>
+      <button>Redo</button>
+      <button>Save</button>
+    </div>
+    <div class="canvas">
+      <div class="placeholder-text">Animation Workspace</div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  © 2018 Vyond Inc. All rights reserved.
+</footer>
+</body>
+</html>
